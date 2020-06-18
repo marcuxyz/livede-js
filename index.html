@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul class="posts"></ul>
+  
+  <script>
+    fetch("https://livede-js.wl.r.appspot.com/posts", {
+      method: "GET"
+    })
+    .then(response => response.json())
+    .then(response =>  document.querySelector(".posts").innerHTML = 
+        response.posts.map(post => `<li>${post.title}</li><li>${post.description}</li><li>${post.draft}</li>`) 
+      )
+    .catch(error => console.log(error))
+
+  </script>
+</body>
+</html>
+

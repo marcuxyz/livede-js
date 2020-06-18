@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "watch": "tsc --watch",
+    "dev": "nodemon ./build/server.js",
+    "start": "node build/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.19",
+    "yup": "^0.29.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/mongoose": "^5.7.24",
+    "@types/yup": "^0.29.3",
+    "nodemon": "^2.0.4",
+    "typescript": "^3.9.5"
+  }
+}
